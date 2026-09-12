@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///C:/Windows/System32/nardjiss.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Witch's Letter — Nardjiss XVIII</title>
+
+<link href="./The Witch&#39;s Letter — Nardjiss XVIII_files/css2" rel="stylesheet">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --ink: #261914;
+    --paper: #d8c29b;
+    --paper-dark: #b59a6c;
+    --wine: #641d2c;
+    --gold: #a7834f;
+    --night: #0d0b0c;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 30%, #35231f 0%, #151011 45%, #070607 100%);
+    color: var(--paper);
+    font-family: "Cormorant Garamond", serif;
+    overflow-x: hidden;
+}
+
+/* MOON */
+
+.moon {
+    position: fixed;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: #dfcc9e;
+    top: 5%;
+    right: 8%;
+    opacity: .09;
+    box-shadow: 0 0 80px #e3c98d;
+    pointer-events: none;
+}
+
+/* STARS */
+
+.star {
+    position: fixed;
+    color: #d5b878;
+    opacity: .35;
+    animation: twinkle 3s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes twinkle {
+    from { opacity: .15; }
+    to { opacity: .6; }
+}
+
+/* MAIN */
+
+.wrapper {
+    width: min(900px, 92%);
+    margin: 45px auto;
+    position: relative;
+}
+
+/* OLD LETTER */
+
+.letter {
+    position: relative;
+    padding: 55px 55px 70px;
+
+    background:
+        radial-gradient(circle at 20% 10%, rgba(255,255,255,.15), transparent 20%),
+        radial-gradient(circle at 80% 90%, rgba(80,40,10,.18), transparent 30%),
+        #cdb789;
+
+    color: var(--ink);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.7),
+        inset 0 0 50px rgba(70,35,15,.25);
+
+    border: 2px solid #80633e;
+
+    transform: rotate(-.25deg);
+}
+
+/* PAPER EDGES */
+
+.letter::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(76,52,28,.55);
+    pointer-events: none;
+}
+
+.letter::after {
+    content: "❦";
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-size: 42px;
+    color: var(--gold);
+}
+
+/* HEADER */
+
+.top-symbol {
+    text-align: center;
+    font-size: 32px;
+    color: var(--wine);
+    letter-spacing: 12px;
+}
+
+.date {
+    text-align: center;
+    font-family: "Cinzel", serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-top: 12px;
+    color: #5b4430;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Cinzel", serif;
+    font-size: clamp(40px, 9vw, 78px);
+    font-weight: 500;
+    letter-spacing: 6px;
+    margin: 25px 0 0;
+    color: #351c19;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    font-size: 23px;
+    color: #68432f;
+}
+
+/* SEPARATOR */
+
+.separator {
+    text-align: center;
+    margin: 30px 0;
+    color: var(--wine);
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+/* RECIPIENT */
+
+.recipient {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.recipient strong {
+    color: var(--wine);
+}
+
+/* BODY */
+
+.body {
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+.dropcap:first-letter {
+    float: left;
+    font-family: "Cinzel", serif;
+    font-size: 76px;
+    line-height: 55px;
+    padding-right: 8px;
+    color: var(--wine);
+}
+
+/* ARABIC */
+
+.arabic {
+    direction: rtl;
+    text-align: center;
+    font-family: "Amiri", serif;
+    font-size: 27px;
+    line-height: 2;
+    margin: 30px 0;
+    color: #51212b;
+}
+
+/* QUOTE */
+
+.quote {
+    text-align: center;
+    margin: 35px auto;
+    padding: 25px;
+    max-width: 650px;
+
+    border-top: 1px solid #80633e;
+    border-bottom: 1px solid #80633e;
+
+    font-size: 25px;
+    font-style: italic;
+    color: #56252a;
+}
+
+/* ROYAL SEAL */
+
+.seal {
+    width: 120px;
+    height: 120px;
+    margin: 45px auto;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #681e2e;
+    color: #d8b87c;
+
+    border: 5px double #9b7547;
+
+    font-family: "Cinzel", serif;
+    font-size: 35px;box-shadow:
+        0 8px 15px rgba(0,0,0,.35),
+        inset 0 0 20px rgba(0,0,0,.4);
+
+    transform: rotate(-8deg);
+}
+
+/* CHAPTER */
+
+.chapter {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.chapter small {
+    font-family: "Cinzel", serif;
+    letter-spacing: 5px;
+}
+
+.chapter h2 {
+    font-family: "Cinzel", serif;
+    font-size: 70px;
+    margin: 5px;
+    color: var(--wine);
+}
+
+/* BUTTON */
+
+button {
+    display: block;
+    margin: 35px auto;
+
+    padding: 14px 32px;
+
+    background: #5d1d2a;
+    color: #e4c98f;
+
+    border: 1px solid #a17a47;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+button:hover {
+    background: #7a2838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(90,20,30,.3);
+}
+
+/* HIDDEN MESSAGE */
+
+.hidden {
+    display: none;
+    animation: reveal 1.5s ease;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* PHONOGRAPH */
+
+.phonograph {
+    margin-top: 50px;
+    padding: 30px;
+
+    background: rgba(61,36,25,.13);
+    border: 1px solid #80633e;
+}
+
+.phonograph h3 {
+    text-align: center;
+    font-family: "Cinzel", serif;
+    letter-spacing: 3px;
+    color: #4c2523;
+}
+
+.song {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(80,50,30,.3);
+
+    font-size: 19px;
+}
+
+.song:last-child {
+    border-bottom: none;
+}
+
+.song a {
+    color: var(--wine);
+    text-decoration: none;
+}
+
+.song a:hover {
+    text-decoration: underline;
+}
+
+/* SIGNATURE */
+
+.signature {
+    text-align: right;
+    margin-top: 50px;
+    font-size: 23px;
+    font-style: italic;
+}
+
+.signature strong {
+    color: var(--wine);
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    margin-top: 35px;
+    font-family: "Cinzel", serif;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #745a3e;
+}
+
+/* FALLING ROSES */
+
+.petal {
+    position: fixed;
+    top: -30px;
+    color: #641d2c;
+    font-size: 18px;
+    pointer-events: none;
+    z-index: 100;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .wrapper {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .letter {
+        padding: 40px 25px 55px;
+    }
+
+    .body {
+        font-size: 18px;
+    }
+
+    .recipient {
+        font-size: 19px;
+    }
+
+    .arabic {
+        font-size: 24px;
+    }
+
+    .quote {
+        font-size: 21px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<script>
+for(let i = 0; i < 35; i++) {
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+    star.innerHTML = "✦";
+
+    star.style.left = Math.random()*100 + "vw";
+    star.style.top = Math.random()*100 + "vh";
+    star.style.fontSize = (Math.random()*8 + 7) + "px";
+    star.style.animationDelay = Math.random()*3 + "s";
+
+    document.body.appendChild(star);
+}
+</script><div class="star" style="left: 44.2865vw; top: 35.0468vh; font-size: 9.88436px; animation-delay: 2.00588s;">✦</div><div class="star" style="left: 89.4509vw; top: 19.1554vh; font-size: 11.4798px; animation-delay: 2.25634s;">✦</div><div class="star" style="left: 9.29079vw; top: 51.6048vh; font-size: 14.0981px; animation-delay: 2.12197s;">✦</div><div class="star" style="left: 25.2257vw; top: 89.5421vh; font-size: 11.2234px; animation-delay: 1.66936s;">✦</div><div class="star" style="left: 19.174vw; top: 36.0457vh; font-size: 10.1345px; animation-delay: 0.852478s;">✦</div><div class="star" style="left: 61.0387vw; top: 30.1132vh; font-size: 8.15029px; animation-delay: 2.63224s;">✦</div><div class="star" style="left: 53.4375vw; top: 48.172vh; font-size: 9.01906px; animation-delay: 2.84992s;">✦</div><div class="star" style="left: 47.1727vw; top: 15.2286vh; font-size: 10.3099px; animation-delay: 2.17765s;">✦</div><div class="star" style="left: 77.5835vw; top: 97.0716vh; font-size: 14.2588px; animation-delay: 2.75849s;">✦</div><div class="star" style="left: 33.7775vw; top: 61.1906vh; font-size: 12.7546px; animation-delay: 0.485962s;">✦</div><div class="star" style="left: 78.7871vw; top: 87.519vh; font-size: 14.053px; animation-delay: 0.205593s;">✦</div><div class="star" style="left: 44.7344vw; top: 97.0085vh; font-size: 10.9899px; animation-delay: 2.3104s;">✦</div><div class="star" style="left: 21.9223vw; top: 92.758vh; font-size: 10.035px; animation-delay: 0.199136s;">✦</div><div class="star" style="left: 29.3409vw; top: 54.6955vh; font-size: 10.5631px; animation-delay: 2.92396s;">✦</div><div class="star" style="left: 35.1535vw; top: 35.0288vh; font-size: 11.0874px; animation-delay: 2.27518s;">✦</div><div class="star" style="left: 90.117vw; top: 32.0664vh; font-size: 9.18285px; animation-delay: 2.15157s;">✦</div><div class="star" style="left: 5.22722vw; top: 90.6616vh; font-size: 14.6237px; animation-delay: 0.0967391s;">✦</div><div class="star" style="left: 77.317vw; top: 0.0285333vh; font-size: 9.51439px; animation-delay: 1.92916s;">✦</div><div class="star" style="left: 79.0629vw; top: 55.1898vh; font-size: 13.1426px; animation-delay: 2.84158s;">✦</div><div class="star" style="left: 83.2003vw; top: 48.0745vh; font-size: 11.6295px; animation-delay: 1.73263s;">✦</div><div class="star" style="left: 78.6994vw; top: 20.3865vh; font-size: 13.9935px; animation-delay: 2.95767s;">✦</div><div class="star" style="left: 96.0085vw; top: 87.9166vh; font-size: 8.57539px; animation-delay: 0.77912s;">✦</div><div class="star" style="left: 8.8241vw; top: 47.6355vh; font-size: 7.58935px; animation-delay: 0.817438s;">✦</div><div class="star" style="left: 89.9671vw; top: 32.297vh; font-size: 9.70748px; animation-delay: 2.79126s;">✦</div><div class="star" style="left: 48.5204vw; top: 38.055vh; font-size: 12.1433px; animation-delay: 2.14899s;">✦</div><div class="star" style="left: 28.3655vw; top: 19.7773vh; font-size: 12.401px; animation-delay: 2.95185s;">✦</div><div class="star" style="left: 18.301vw; top: 2.87421vh; font-size: 13.1438px; animation-delay: 0.925448s;">✦</div><div class="star" style="left: 34.7067vw; top: 97.1012vh; font-size: 8.28301px; animation-delay: 0.501496s;">✦</div><div class="star" style="left: 80.6315vw; top: 35.149vh; font-size: 10.7317px; animation-delay: 1.99944s;">✦</div><div class="star" style="left: 92.9167vw; top: 27.9238vh; font-size: 7.21989px; animation-delay: 2.0328s;">✦</div><div class="star" style="left: 95.2996vw; top: 57.088vh; font-size: 7.54172px; animation-delay: 0.54175s;">✦</div><div class="star" style="left: 30.8079vw; top: 24.0861vh; font-size: 9.82697px; animation-delay: 2.6555s;">✦</div><div class="star" style="left: 43.6974vw; top: 28.4308vh; font-size: 7.12719px; animation-delay: 1.64676s;">✦</div><div class="star" style="left: 8.65732vw; top: 32.5312vh; font-size: 7.31093px; animation-delay: 2.77256s;">✦</div><div class="star" style="left: 20.4197vw; top: 45.0834vh; font-size: 11.1167px; animation-delay: 2.09159s;">✦</div>
+
+
+<div class="wrapper">
+
+<main class="letter">
+
+    <div class="top-symbol">
+        ☾ ✦ ❦ ✦ ☽
+    </div>
+
+    <div class="date">
+        THE EIGHTEENTH YEAR · UNDER THE WINTER MOON
+    </div>
+
+    <h1>NARDJISS</h1>
+
+    <div class="subtitle">
+        Queen of the Kingdom of Books
+    </div>
+
+    <div class="separator">
+        ❧ ♕ ❧
+    </div>
+
+
+    <div class="recipient">
+
+        <p>
+            <strong>To Her Majesty, Queen Nardjiss,</strong>
+        </p>
+
+        <p>
+            Keeper of the Ancient Library, Lady of Midnight,
+            Reader of Forbidden Stories, and Sovereign of her
+            eighteenth year.
+        </p>
+
+    </div>
+
+
+    <div class="body">
+
+        <p class="dropcap">
+            My Queen,
+        </p>
+
+        <p>
+            Forgive the hour at which this letter arrives.
+            The moon was already high when I crossed the forest,
+            and the ravens insisted that I turn back.
+        </p><p>
+            Naturally, I ignored them.
+        </p>
+
+        <p>
+            There are certain occasions upon which even witches
+            must abandon their gloomy towers and ancient spells.
+            Your eighteenth birthday is one of them.
+        </p>
+
+        <p>
+            For tonight is not merely the passing of another year.
+            Tonight marks the opening of a new chapter.
+        </p>
+
+    </div>
+
+
+    <div class="chapter">
+
+        <small>THE QUEEN'S</small>
+
+        <h2>XVIII</h2>
+
+        <small>TH CHAPTER</small>
+
+    </div>
+
+
+    <div class="arabic">
+
+        يا نرجس، يا ملكة الحكايات والكتب،<br>
+
+        في عامكِ الثامن عشر،<br>
+
+        أتمنى أن تفتح لكِ الحياة أبواباً<br>
+
+        أجمل من كل ما قرأتِه يوماً.
+
+    </div>
+
+
+    <div class="quote">
+
+        “Some girls inherit kingdoms.<br>
+        Some girls build their own.”
+
+    </div>
+
+
+    <div class="body">
+
+        <p>
+            I have watched kingdoms rise and fall.
+            I have seen princes lose their crowns,
+            emperors lose their empires,
+            and heroes become forgotten names in dusty books.
+        </p>
+
+        <p>
+            But I have always believed that the most dangerous
+            person in any kingdom is the girl who knows how to think.
+        </p>
+
+        <p>
+            And you, dear Queen, possess a mind that would make
+            even the oldest witch nervous.
+        </p>
+
+        <p>
+            So keep your curiosity.
+        </p>
+
+        <p>
+            Keep your books.
+        </p>
+
+        <p>
+            Keep your strange thoughts that arrive at three
+            in the morning.
+        </p>
+
+        <p>
+            Keep the parts of yourself that the world does not
+            immediately understand.
+        </p>
+
+        <p>
+            They may be the most precious parts.
+        </p>
+
+    </div>
+
+
+    <div class="seal">
+        ♕
+    </div>
+
+
+    <div class="body">
+
+        <p>
+            As for your eighteenth year...
+        </p>
+
+        <p>
+            I have cast a small spell for you.
+        </p>
+
+        <p>
+            May you encounter books that become dear friends.
+            May you discover places that feel like scenes from
+            forgotten novels.
+        </p>
+
+        <p>
+            May Baghdad's ancient stories whisper something
+            beautiful to you whenever you need it.
+        </p>
+
+        <p>
+            May your days contain enough chaos to make them
+            interesting, but enough peace to make them worth living.
+        </p>
+
+        <p>
+            And when life becomes another complicated chapter,
+            remember:
+        </p>
+
+    </div>
+
+
+    <div class="quote">
+
+        ✦ You are the author too. ✦
+
+    </div>
+
+
+    <button onclick="openLetter()">✦ The seal has been broken ✦</button>
+
+
+    <section id="secret" class="hidden" style="display: block;">
+
+        <div class="separator">
+            ❦ ✦ ❦
+        </div>
+
+        <div class="body">
+
+            <p>
+                There is one final thing I must tell you, Your Majesty.
+            </p>
+
+            <p>
+                I could have sent you gold.
+                I could have sent roses.
+                I could have summoned a thousand ravens
+                to sing outside your window.
+            </p>
+
+            <p>
+                But instead, I chose words.
+            </p>
+
+            <p>
+                Because words are the only magic that survives
+                the person who casts them.
+            </p>
+
+            <p>
+                So let these words remain somewhere in your
+                eighteenth chapter:
+            </p>
+
+        </div>
+
+
+        <div class="arabic">
+
+            عيد ميلاد سعيد يا نرجس ♡<br>
+
+            وكل عام وأنتِ بخير،<br>
+
+            وكل عام وحكايتكِ تصبح أجمل.
+
+        </div>
+
+
+        <div class="quote">
+
+            May your eighteenth year<br>
+            be a beautiful curse.
+            <br><br>
+            ✦ And may the story ahead<br>
+            be better than the story behind. ✦
+
+        </div><!-- MUSIC -->
+
+        <div class="phonograph">
+
+            <h3>
+                ♫ THE WITCH'S PHONOGRAPH ♫
+            </h3>
+
+            <p style="text-align:center;">
+                Songs chosen for the Queen's midnight library
+            </p>
+
+
+            <div class="song">
+
+                <span>
+                    01 · Je te laisserai des mots
+                    <small> — Patrick Watson</small>
+                </span>
+
+                <a href="https://www.youtube.com/results?search_query=Je+te+laisserai+des+mots+Patrick+Watson" target="_blank">
+                    ▶ Listen
+                </a>
+
+            </div>
+
+
+            <div class="song">
+
+                <span>
+                    02 · Caribbean Blue
+                    <small> — Enya</small>
+                </span>
+
+                <a href="https://www.youtube.com/results?search_query=Caribbean+Blue+Enya" target="_blank">
+                    ▶ Listen
+                </a>
+
+            </div>
+
+
+            <div class="song">
+
+                <span>
+                    03 · Ya Wahidan
+                    <small> — Fairuz</small>
+                </span>
+
+                <a href="https://www.youtube.com/results?search_query=Fairuz+Ya+Wahidan" target="_blank">
+                    ▶ Listen
+                </a>
+
+            </div>
+
+
+            <div class="song">
+
+                <span>
+                    04 · Love Story
+                    <small> — Taylor Swift</small>
+                </span>
+
+                <a href="https://www.youtube.com/results?search_query=Love+Story+Taylor+Swift" target="_blank">
+                    ▶ Listen
+                </a>
+
+            </div>
+
+
+            <div class="song">
+
+                <span>
+                    05 · Young and Beautiful
+                    <small> — Lana Del Rey</small>
+                </span>
+
+                <a href="https://www.youtube.com/results?search_query=Young+and+Beautiful+Lana+Del+Rey" target="_blank">
+                    ▶ Listen
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="signature">
+
+            Yours beneath the moon,<br>
+
+            <strong>
+                Ayhem
+            </strong>
+
+            <br>
+
+            <small>
+                The Witch of the Black Rose
+            </small>
+
+        </div>
+
+    </section>
+
+
+    <div class="footer">
+
+        SEALED WITH INK · ROSE · MOONLIGHT · XIX? NO — XVIII
+
+        <br><br>
+
+        ❦ ☾ ♕ ✦ 🕯️ ✦ ♕ ☽ ❦
+
+    </div>
+
+</main>
+
+</div>
+
+
+<script>
+
+function openLetter() {
+
+    const secret = document.getElementById("secret");
+
+    secret.style.display = "block";
+
+    document.querySelector("button").innerHTML =
+        "✦ The seal has been broken ✦";
+
+    for(let i = 0; i < 35; i++) {
+
+        setTimeout(() => {
+
+            const petal = document.createElement("div");
+
+            petal.className = "petal";
+
+            petal.innerHTML =
+                Math.random() > .4 ? "❦" : "✦";
+
+            petal.style.left =
+                Math.random()*100 + "vw";
+
+            petal.style.animationDuration =
+                (Math.random()*4 + 4) + "s";
+
+            petal.style.fontSize =
+                (Math.random()*12 + 12) + "px";
+
+            document.body.appendChild(petal);
+
+            setTimeout(() => {
+                petal.remove();
+            }, 9000);
+
+        }, i * 70);
+
+    }
+
+    setTimeout(() => {
+
+        secret.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }, 500);
+}
+
+</script>
+
+
+<div class="petal" style="left: 31.4969vw; animation-duration: 6.77349s; font-size: 16.5077px;">❦</div></body></html>
